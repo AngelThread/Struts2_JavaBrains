@@ -2,16 +2,15 @@
  <!DOCTYPE struts PUBLIC
     "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
     "http://struts.apache.org/dtds/struts-2.3.dtd">
-<struts>
-
-
-	<package name="default" namespace="/tutorials" extends="struts-default">
+    <struts>
+    
+    
+    <package name="default" namespace="/tutorials" extends="struts-default">
 		<action name="getTutorial" class="com.ugur.yeter.struts.action.TutorialAction">
-			<result name="success">/success.jsp</result>
-			<result name="failure">/error.jsp</result>
+		<result name="success">/success.jsp</result>
 		</action>
 
 
-	</package>
-
-</struts>
+    </package>
+    
+    </struts>
