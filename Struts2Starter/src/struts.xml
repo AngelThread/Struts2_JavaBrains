@@ -5,8 +5,10 @@
     <struts>
     
     
-    <package name="default" extends="struts-default">
-		<action name="getTutorial" class="com.ugur.yeter.struts.action.TutorialAction"></action>
+    <package name="default" namespace="/tutorials" extends="struts-default">
+		<action name="getTutorial" class="com.ugur.yeter.struts.action.TutorialAction">
+		<result name="success">/success.jsp</result>
+		</action>
 
 
     </package>
