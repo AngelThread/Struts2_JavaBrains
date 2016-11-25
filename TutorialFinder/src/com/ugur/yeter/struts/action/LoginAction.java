@@ -1,15 +1,17 @@
 package com.ugur.yeter.struts.action;
 
-public class LoginAction {
+import com.opensymphony.xwork2.Action;
+
+public class LoginAction implements Action{
 	private String userId;
 	private String password;
 
 	public String execute() {
 
 		if (getUserId().equalsIgnoreCase("userId") && getPassword().equalsIgnoreCase("password"))
-			return "success";
+			return SUCCESS;
 		else
-			return "failure";
+			return INPUT;
 	}
 
 	public String getUserId() {
