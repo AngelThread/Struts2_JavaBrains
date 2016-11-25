@@ -6,13 +6,7 @@
 
 
 
-	<package name="login" namespace="/" extends="struts-default">
-		<action name="login" class="com.ugur.yeter.struts.action.LoginAction">
-			<result name="success">/searchForm.jsp</result>
-			<result name="input">/login.jsp</result>
-		</action>
-	</package>
-
+<include file="login.xml"></include>
 
 	<package name="default" namespace="/tutorials" extends="struts-default">
 		<action name="getTutorial" class="com.ugur.yeter.struts.action.TutorialAction">
