@@ -9,12 +9,14 @@
 	<package name="login" namespace="/" extends="struts-default">
 		<action name="login" class="com.ugur.yeter.struts.action.LoginAction">
 			<result name="success">/searchForm.jsp</result>
+			<result name="login">/login.jsp</result>
 			<result name="input">/login.jsp</result>
+
 		</action>
 	</package>
 
 	<package name="search" namespace="/" extends="struts-default">
-		 <action name="search*"> 	
+		<action name="search*">
 			<result>/search{1}.jsp</result>
 		</action>
 	</package>
