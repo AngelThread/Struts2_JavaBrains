@@ -14,6 +14,14 @@ public class TutorialAction {
 		return "success";
 
 	}
+	
+	public String someOtherMethod() {
+		TutorialFinderService service = new TutorialFinderService();
+		bestTutorialSite = service.getBestTutorialSite(language);
+		System.out.println("someOtherMethod executed");
+		System.out.println("language:"+language );
+		return "success";
+	}
 
 	public String getBestTutorialSite() {
 		return bestTutorialSite;

@@ -9,7 +9,7 @@
 <include file="login.xml"></include>
 
 	<package name="default" namespace="/tutorials" extends="struts-default">
-		<action name="getTutorial" class="com.ugur.yeter.struts.action.TutorialAction">
+		<action name="getTutorial" class="com.ugur.yeter.struts.action.TutorialAction" method="someOtherMethod">
 			<result name="success">/success.jsp</result>
 		</action>
 
