@@ -11,8 +11,8 @@
 	<s:form action="login">
 		<%-- <s:textfield label="Login ID" key="userId" />
 		<s:password label="Password" key="password" /> --%>
-		<s:textfield label="Login ID" key="user.userId" />
-		<s:password label="Password" key="user.password" />
+		<s:textfield label="Login ID" key="userId" />
+		<s:password label="Password" key="password" />
 		<s:submit />
 	</s:form>
 </body>

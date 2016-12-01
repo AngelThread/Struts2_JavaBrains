@@ -4,11 +4,12 @@ import org.apache.commons.lang.StringUtils;
 
 // import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
 import com.ugur.yeter.struts.model.User;
 import com.ugur.yeter.struts.service.LoginService;
 
 // public class LoginAction implements Action{
-public class LoginAction extends ActionSupport {
+public class LoginAction extends ActionSupport  implements ModelDriven{
 
 	private User user = new User();
 
@@ -41,6 +42,12 @@ public class LoginAction extends ActionSupport {
 
 	public void setUser(User user) {
 		this.user = user;
+	}
+
+	@Override
+	public Object getModel() {
+		// TODO Auto-generated method stub
+		return user;
 	}
 
 }
