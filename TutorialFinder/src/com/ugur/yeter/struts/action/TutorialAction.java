@@ -18,6 +18,8 @@ public class TutorialAction {
 	public String getTutorial() {
 		//TutorialFinderService service = new TutorialFinderService();
 		///bestTutorialSite = service.getBestTutorialSite(language);
+		TutorialFinderService service = new TutorialFinderService();
+		bestTutorialSite = service.getBestTutorialSite(language);
 		System.out.println("getTutorial executed");
 		System.out.println("language:"+language );
 		return "success";
@@ -26,6 +28,8 @@ public class TutorialAction {
 	public String addTutorial() {
 		//TutorialFinderService service = new TutorialFinderService();
 		///bestTutorialSite = service.getBestTutorialSite(language);
+		TutorialFinderService service = new TutorialFinderService();
+		bestTutorialSite = service.getBestTutorialSite(language);
 		System.out.println("addTutorial executed");
 		System.out.println("language:"+language );
 		return "success";

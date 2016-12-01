@@ -4,6 +4,8 @@ import org.apache.commons.lang.StringUtils;
 
 // import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionSupport;
+import com.ugur.yeter.struts.model.User;
+import com.ugur.yeter.struts.service.LoginService;
 
 import freemarker.template.utility.StringUtil;
 
@@ -12,11 +14,16 @@ public class LoginAction extends ActionSupport {
 
 	private String userId;
 	private String password;
+	private User user;
 
 	// @Override it is for Action interface which we implemented
 	public String execute() {
+		LoginService loginService = new LoginService();
+		user = new User();
+		user.setUserId("userId");
+		user.setPassword("password");
 
-		if (getUserId().equalsIgnoreCase("userId") && getPassword().equalsIgnoreCase("password"))
+		if (loginService.loginServiceVerifyLogin(user))
 			return SUCCESS;
 		else
 			return INPUT;
@@ -46,6 +53,14 @@ public class LoginAction extends ActionSupport {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 }

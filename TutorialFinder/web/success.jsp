@@ -9,7 +9,7 @@
 <title>Success</title>
 </head>
 <body>
-Business service executed!
+Business service executed 1!
 <s:property value ="bestTutorialSite" />
 </body>
 </html>
