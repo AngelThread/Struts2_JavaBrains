@@ -7,21 +7,17 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.ugur.yeter.struts.model.User;
 import com.ugur.yeter.struts.service.LoginService;
 
-import freemarker.template.utility.StringUtil;
-
 // public class LoginAction implements Action{
 public class LoginAction extends ActionSupport {
 
-	private String userId;
-	private String password;
-	private User user;
+	private User user = new User();
 
 	// @Override it is for Action interface which we implemented
 	public String execute() {
 		LoginService loginService = new LoginService();
-		user = new User();
-		user.setUserId("userId");
-		user.setPassword("password");
+		// user = new User();
+		// user.setUserId("userId");
+		// user.setPassword("password");
 
 		if (loginService.loginServiceVerifyLogin(user))
 			return SUCCESS;
@@ -31,28 +27,12 @@ public class LoginAction extends ActionSupport {
 
 	@Override
 	public void validate() {
-		if (StringUtils.isEmpty(getUserId())) {
+		if (StringUtils.isEmpty(user.getUserId())) {
 			addFieldError("userId", "User Id cannot be blank");
 		}
-		if (StringUtils.isEmpty(getPassword())) {
+		if (StringUtils.isEmpty(user.getPassword())) {
 			addFieldError("password", "Password cannot be blank");
 		}
-	}
-
-	public String getUserId() {
-		return userId;
-	}
-
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
 	}
 
 	public User getUser() {
